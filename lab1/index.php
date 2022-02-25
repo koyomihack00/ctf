@@ -271,6 +271,7 @@ if(!$_SESSION['userlevel']){
                                             <pre>Flag</pre>
                                             <form action="">
                                                 <input type="text" name="" id="" class="form-control">
+                                                
                                                 <input type="submit" value="Submit" class="btn btn-success mt-3">
                                             </form>
                                         </div>
