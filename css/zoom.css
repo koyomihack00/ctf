@@ -1,0 +1,20 @@
+
+figure {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+
+
+/* Blur + Gray Scale */
+.hover10 figure img {
+  -webkit-filter: grayscale(0%) blur(0px);
+  filter: grayscale(0%) blur(0px);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.hover10 figure:hover img {
+  -webkit-filter: grayscale(100%) blur(0.5px);
+  filter: grayscale(100%) blur(0.5px);
+}
