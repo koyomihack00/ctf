@@ -251,7 +251,20 @@ if(!$_SESSION['userlevel']){
                     <br>
                     
                     <div class="card" style="width: 18rem;">
-                    <h5 style="color:red">(ยังไม่ผ่าน)</h5>
+                    <?php
+                        $user_id = $_SESSION['userid'];
+                        include('server/config.php');
+                        $sql = "SELECT * FROM ctf_up_user WHERE user_id = '$user_id' AND lab_id ='1'";
+                        if($query = mysqli_query($conn,$sql)){
+                            $row = mysqli_fetch_array($query);
+                            if($row['status_lab'] == '1'){
+                                echo '<h5 style="color:#00FF00">( ผ่านแล้ว )</h5>';
+                            }else{
+                                echo '<h5 style="color:red">(ยังไม่ผ่าน)</h5>';
+                            }       
+                        }
+
+                    ?>
                     <a href="lab1/index.php">
                     <div class="hover10">
                     <figure><img src="img/linuxfu.jpg" class="card-img-top" alt="..." height="170px"></figure>
@@ -266,7 +279,20 @@ if(!$_SESSION['userlevel']){
                 <div class="col-4 text-white" align="center" data-aos="fade-up">
                     <br>
                     <div class="card" style="width: 18rem;">
-                    <h5 style="color:red">(ยังไม่ผ่าน)</h5>
+                    <?php
+                        $user_id = $_SESSION['userid'];
+                        include('server/config.php');
+                        $sql = "SELECT * FROM ctf_up_user WHERE user_id = '$user_id' AND lab_id ='2'";
+                        if($query = mysqli_query($conn,$sql)){
+                            $row = mysqli_fetch_array($query);
+                            if($row['status_lab'] == '1'){
+                                echo '<h5 style="color:#00FF00">( ผ่านแล้ว )</h5>';
+                            }else{
+                                echo '<h5 style="color:red">(ยังไม่ผ่าน)</h5>';
+                            }       
+                        }
+
+                    ?>
                         <a href="lab2/index.php">
                         <div class="hover10">
                         <figure><img src="img/syringe1.jpg" class="card-img-top" alt="..." height="170px"></figure>
