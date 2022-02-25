@@ -144,7 +144,7 @@ if(!$_SESSION['userlevel']){
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto" data-aos="fade-left">
-                    <li class="nav-item"><a class="nav-link" href="../login/index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.php">Home</a></li>
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="navbar-nav" data-aos="fade-left">
                             <li class="nav-item dropdown">
@@ -238,13 +238,55 @@ if(!$_SESSION['userlevel']){
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <div class="accordion-body bg-dark text-white">
+                                    <h3>คำสั่งที่ควรใช้เป็น "พื้นฐาน" เมื่อแฮกเซิร์ฟเวอร์หรือ ต้องการควบคุมหรือใช้คำสั่ง
+                                        ทำสิ่งต่างๆในเซิร์ฟเวอร์ที่เป็น linux</h3>
+                                    <br>
+                                    <p>LINUX นั้นเป็นระบบปฏิบัติการ ซึ่งจะเหมือน กับ ระบบ ปฏิบัติการ windows
+                                        ซึ่งระบบปฏิบัติการนั้น สามารถทำได้หลายอย่างเช่น ใช้งานทั่วไปหรือ
+                                        ฟังเพลงดูหนังอะไรต่างๆมากมาย โดย ระบบปฏิบัติการเรียกในภาษาอังกฤษว่า Openering
+                                        System หรือ OS โดย ในโจทย์นี้ เราจะมาพูดถึงคำสั่งในระบบปฏิบัติการ linux ระบบ
+                                        ปฏิบัติการ linux นั้น จะมีความแตกต่างกับ windows โดย linux เป็น open source และ
+                                        มีรุ่น หรือเวอร์ชั่นที่แตกแขนง ออกไปมากมาย เช่น debain หรือ ubuntu และ linux
+                                        ยังมีคำสั่งเฉพาะตัวด้วย โดยใน linux จะมี คำสั่งพื้นฐานและอีกมากมาย
+                                        (ในโจทย์นี้จะคัดเฉพาะคำสั่งจะเป็นเท่านั้น basic มากๆ)</p>
+                                    <p>สมมุติ เราอยากรู้ว่าเราเป็นใครหรือเป็น user อะไรในเครื่อง เราก็สามารถใช้คำสั่ง
+                                        whoami ได้ ในตัวอย่าง จะเป็น ยูสที่ชื่อ www-data เพราะตัว Command line (Command
+                                        line คือไร?) หรือตัวรับคำสั่งนี้รัน บน web shell (web shell คือไร?) ซึ่งจะทำงาน
+                                        เป็นสิทธ์ www-data หรือ apache โดยปกติ</p>
+                                    <img src="https://www.howtogeek.com/wp-content/uploads/2019/04/top_commands_24.png?trim=1,1&bg-color=000&pad=1,1"
+                                        alt="">
+                                    <br>
+                                    <hr>
+                                    <p>
+                                        echo - คำสั่งใช้ในการ แสดง คำต่างๆ บนหน้าจอ หรือ ปรินท์ เข้าสู่ ไฟล์ ต่างๆได้
+                                        เช่น echo HELLO &gt; hello.txt ถ้าอยากให้ใส่คำที่ต้องการเข้าไปใน ไฟล์ที่อื่นๆ ก็
+                                        สามารถเพิ่ม &gt; อีกตัว เช่น echo HELLObro &gt;&gt; hello.txt
+                                        <br><br>
+                                        cat - คำสั่งใช้ในการอ่านไฟล์ เช่น cat hello.txt
+                                        เราสามารถอ่านไฟล์ในพาทซ์อื่นๆได้ด้วยเช่น cat /home/hello.txt
+
+                                        <br><br>
+                                        rm - คำสั่งใช้ในการลบไฟล์ เช่น rm hello.txt
+                                        <br><br>
+                                        mkdir - คำสั่งใช้ในการสร้างโฟลเดอร์ เช่น mkdir HACKER
+                                        <br><br>
+                                        pwd - คำสั่งใช้ในการดูว่าเราอยู่พาทซ์ไหน
+                                        <br><br>
+                                        ls - คำสั่งดูว่า ในโฟลเดอร์หรือพาทซ์ที่เราอยู่ มีไฟล์ และโฟลเดอร์อะไรบ้าง
+                                        <br><br>
+                                        chmod - คำสั่งเปลี่ยนสิทธ์ของไฟล์หรือโฟลเดอร์ เช่น chmod 777 hello.txt
+                                        <br><br>
+                                        whoami - คำสั่งใช้ในการดูว่าสิทธ์ที่ใช้อยู่ตอนนี้เป็นสิทธ์อะไร
+                                        <br><br>
+                                        cd - คำสั่งใช้ในการ เปลี่ยนโฟลเดอร์หรือเข้าไปในโฟลเดอร์ที่ต้องการ เช่น cd /home
+                                        หรือ cd /root
+                                        <br><br>
+                                        less - คำสั่ง ที่เหมือน cat แต่จะเหมือนการเปิดหนังสือทีละหน้า เป็นการเลื่อนอ่าน
+                                        เช่น less
+                                        hello.txt
+                                        </>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -256,26 +298,69 @@ if(!$_SESSION['userlevel']){
                                     <span class="text-white" style="font-size: 24px">Lab.</span>
                                 </button>
                             </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
+                                <div class="accordion-body bg-dark">
                                     <div class="container">
-                                            
+
                                         <div class="col-12">
                                             <br>
-                                            <pre>> Start Hacking <</pre>
+                                            <pre> <a href="linux/linux.php" target="_blank">> Start Hacking <</a></pre>
                                         </div>
                                         <br>
                                         <hr>
                                         <div class="col-12">
-                                            <pre>Flag</pre>
-                                            <form action="">
-                                                <input type="text" name="" id="" class="form-control">
-                                                
-                                                <input type="submit" value="Submit" class="btn btn-success mt-3">
+                                            <pre style="color:white">Flag</pre>
+                                            <form action="" method="post">
+                                                <input type="text" name="flag" class="form-control"
+                                                    placeholder="flag{xxxxxxxxxxxxxxxxxxxxxxxx}">
+
+                                                <input type="submit" name="sub" value="Submit"
+                                                    class="btn btn-success mt-3">
+                                                <?php
+                                                    
+                                                    if(isset($_POST['sub'])){
+                                                        $flag = $_POST['flag'];
+                                                        if($flag == 'flag{cat_flag_linux}'){
+                                                            include('../server/config.php');
+                                                            $user_id = $_SESSION['userid'];
+                                                            $sql = "INSERT INTO `ctf_up_user`(`user_id`, `lab_id` ,`status_lab`) VALUES ($user_id,'1','1')";
+                                                            if (mysqli_query($conn, $sql)) {
+                                                            echo '<script>
+                                                                Swal.fire({
+                                                                    icon: "success",
+                                                                    title: "You has been flag corrected.",
+                                                                    showConfirmButton: false,
+                                                                    timerProgressBar: true,
+                                                                    timer: 3000
+                                                                }).then((result) => {
+                                                                    if (result.isDismissed) {
+                                                                    window.location.href = "../index.php";
+                                                                    }
+                                                                });
+                                                                </script>';
+                                                              } else {
+                                                                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                                                              }
+                                                              
+                                                              mysqli_close($conn);
+                                                            
+                                                        }else{
+                                                            echo "<script>
+                                                            Swal.fire({
+                                                                icon: 'error',
+                                                                title: 'Answer Incorrect.',
+                                                                showConfirmButton: false,
+                                                                timerProgressBar: true,
+                                                                timer: 3000
+                                                              });
+                                                                </script>";
+                                                        }
+                                                    }
+                                                ?>
                                             </form>
                                         </div>
-                                        
+
 
                                     </div>
 
