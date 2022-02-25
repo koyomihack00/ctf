@@ -1,13 +1,13 @@
 <?php
-// session_start();
-// if(!$_SESSION['userlevel']){
-//     echo '<script>alert("เข้าสู่ระบบก่อน สิ");</script>';
-//     echo '<script>window.location.href = "../../index.php";</script>';
-//     // header("Location: ../index.php");
-// }else if($_SESSION['userlevel'] != 'member'){
-//     echo '<script>alert("คุณเป็น Admin มาทำไมตรงนี้ครัชช!!!!");</script>';
-//     echo '<script>window.location.href = "../../admin/index.php";</script>';
-// }
+session_start();
+if(!$_SESSION['userlevel']){
+    echo '<script>alert("เข้าสู่ระบบก่อน สิ");</script>';
+    echo '<script>window.location.href = "../../index.php";</script>';
+    // header("Location: ../index.php");
+}else if($_SESSION['userlevel'] != 'member'){
+    echo '<script>alert("คุณเป็น Admin มาทำไมตรงนี้ครัชช!!!!");</script>';
+    echo '<script>window.location.href = "../../admin/index.php";</script>';
+}
 
 ?>
 

@@ -3,11 +3,7 @@
         $servername = "localhost";
         $username = "root";
         $password = "";
-<<<<<<< HEAD
-        $dbname = "jackdeeper_db";
-=======
         $dbname = "login_admin_user";
->>>>>>> 662ceaab1090ee4c47165f9baeb79c28a3ad1472
 
 
         //Create Connection
